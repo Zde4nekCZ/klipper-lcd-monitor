@@ -1,0 +1,12 @@
+[Unit]
+Description=Klipper LCD Monitor
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/box_monitor.py
+WorkingDirectory=/home/pi
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
